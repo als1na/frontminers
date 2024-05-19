@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontMiners - Tu Tienda de Minería de Criptomonedas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom justify-content-between">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="Logo de FrontMiners">
+        </a>
+        <h2><strong class="color-primary">Front</strong><strong class="color-accent">Miners</strong></h2>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sobrenosotros.html">Sobre nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Iniciar sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="registro.html">Registro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link cart-link" href="carrito.html">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido de la página -->
+    <div class="container mt-5 mb-1">
+        <h2 class="text-center products-header">Nuestros Productos</h2>
+        <div class="row">
+            <!-- NerdMiners -->
+            <div class="col-lg-3 col-md-6 product-section2 text-center">
+                <img src="img/nerdminer.png" alt="NerdMiner" class="product-image">
+                <h3>NerdMiner</h3>
+                <p class="product-description">Un proyecto de código abierto que te permite intentar alcanzar un bloque de Bitcoin con un pequeño dispositivo. Aprende sobre la minería mientras obtienes ingresos.</p>
+                <p class="product-price"></p>
+                <a href="nerdminers.html" class="btn btn-info">Ver más</a>
+            </div>
+            <!-- BitAxes -->
+            <div class="col-lg-3 col-md-6 product-section2 text-center">
+                <img src="img/bitaxe.png" alt="BitAxes" class="product-image">
+                <h3>BitAxe</h3>
+                <p class="product-description">Los primeros mineros ASIC funcionales de código abierto en el mundo. Eficientes, potentes y diseñados para todos.
+                </p>
+                <p class="product-price"></p>
+                <a href="bitaxes.html" class="btn btn-info">Ver más</a>
+            </div>
+            <!-- Avalon Nano 3 -->
+            <div class="col-lg-3 col-md-6 product-section2 text-center">
+                <img src="img/avalannano.png" alt="Avalon Nano 3" class="product-image">
+                <h3>Avalon Nano 3</h3>
+                <p class="product-description">¿Quieres mantenerte caliente en invierno y ganar BTC al mismo tiempo? El Avalon Nano 3 es la respuesta. ¡Convierte el frío en ingresos!</p>
+                <p class="product-price"></p>
+                <a href="avalonnano3.html" class="btn btn-info">Ver más</a>
+            </div>
+            <!-- Apollo II -->
+            <div class="col-lg-3 col-md-6 product-section2 text-center">
+                <img src="img/apolloii.png" alt="Apollo II" class="product-image">
+                <h3>Apollo II</h3>
+                <p class="product-description">Para aquellos que buscan la máxima potencia y rendimiento, el Apollo II es la elección perfecta.
+                </p>
+                <p class="product-price"></p>
+                <a href="apollo2.html" class="btn btn-info">Ver más</a>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center mt-2 mb-5">
+        <a href="testimonios.html" id="testimoniosBtn" class="btn btn-primary">Testimonios de Clientes</a>
+    </div> 
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3">
+        <div class="container text-center">
+            <span class="color-white"><p>
+                © 2024 FrontMiners - Es un proyecto elaborado por 
+                <a href="https://www.alsina.me/" target="_blank" title="Visitar la página de Eduardo Alsina">Eduardo Alsina</a>, 
+                estudiante de DAW en 
+                <a href="https://www.cesurformacion.com/" target="_blank" title="Visitar la página de Cesur">Cesur</a> 
+                . Todos los derechos reservados.</p></span>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="js/validaSesion.js"></script>
+    <script src="js/loadProductPrices.js"></script>
+    <script>
+        document.getElementById('testimoniosBtn').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.open('testimonios.html', 'Testimonios', 'width=800,height=600');
+        });
+    </script>
+    
+
+</body>
+</html>

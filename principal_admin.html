@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontMiners - Panel de Administrador</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom justify-content-between">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="Logo de FrontMiners">
+        </a>
+        <h2><strong class="color-primary">Front</strong><strong class="color-accent">Miners</strong></h2>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sobrenosotros.html">Sobre nosotros</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#misDatos">Mis Datos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#verPedidos">Ver Pedidos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#verUsuarios">Ver Usuarios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#verProductos">Ver Productos</a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="misDatos" class="tab-pane fade show active">
+                <h3>Mis Datos</h3>
+                <form id="datosForm" class="mt-4">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="text" id="contrasena" name="contrasena" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Actualizar Datos</button>
+                </form>
+            </div>
+            <div id="verPedidos" class="tab-pane fade">
+                <h3>Ver Pedidos</h3>
+                <p>Lista de todos los pedidos realizados por los usuarios.</p>
+                <table class="table table-bordered mt-4">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID Pedido</th>
+                            <th>Usuario</th>
+                            <th>Correo</th>
+                            <th>Fecha</th>
+                            <th>Total</th>
+                            <th>Estado</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaPedidos">
+                    </tbody>
+                </table>
+            </div>
+            <div id="verUsuarios" class="tab-pane fade">
+                <h3>Ver Usuarios</h3>
+                <p>Ver y administrar los usuarios registrados en el sistema.</p>
+                <table class="table table-bordered mt-4">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>Dirección</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaUsuarios">
+                    </tbody>
+                </table>
+            </div>
+            <div id="verProductos" class="tab-pane fade">
+                <h3>Ver Productos</h3>
+                <p>Administrar los productos disponibles en la tienda.</p>
+                <table class="table table-bordered mt-4">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción 1</th>
+                            <th>Descripción 2</th>
+                            <th>Descripción 3</th>
+                            <th>Descripción 4</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaProductos">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3">
+        <div class="container text-center">
+            <span class="color-white"><p>
+                © 2024 FrontMiners - Es un proyecto elaborado por 
+                <a href="https://www.alsina.me/" target="_blank" title="Visitar la página de Eduardo Alsina">Eduardo Alsina</a>, 
+                estudiante de DAW en 
+                <a href="https://www.cesurformacion.com/" target="_blank" title="Visitar la página de Cesur">Cesur</a> 
+                . Todos los derechos reservados.</p></span>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="js/validaSesion.js"></script>
+    <script src="js/misDatos.js"></script>
+    <script src="js/verPedidos.js"></script>
+    <script src="js/verUsuarios.js"></script>
+    <script src="js/verProductos.js"></script>
+
+</body>
+</html>

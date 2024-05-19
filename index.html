@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontMiners - Tu Tienda de Minería de Criptomonedas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom justify-content-between">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="Logo de FrontMiners">
+        </a>
+        <h2><strong class="color-primary">Front</strong><strong class="color-accent">Miners</strong></h2>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sobrenosotros.html">Sobre nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Iniciar sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="registro.html">Registro</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link cart-link" href="carrito.html">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Carousel Slider -->
+    <div id="productSlider" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#productSlider" data-slide-to="0" class="active"></li>
+            <li data-target="#productSlider" data-slide-to="1"></li>
+            <li data-target="#productSlider" data-slide-to="2"></li>
+            <li data-target="#productSlider" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner">
+            <!-- Primera diapositiva -->
+            <div class="carousel-item active">
+                <div class="row no-gutters">
+                    <div class="col-md-5">
+                        <img src="img/nerdminer.png" alt="NerdMiner" class="img-fluid">
+                    </div>
+                    <div class="col-md-7 d-flex flex-column justify-content-center">
+                        <h2>NerdMiner v2</h2>
+                        <p class="texto">Un proyecto de código abierto que te permite intentar alcanzar un bloque de Bitcoin con un pequeño dispositivo. Aprende sobre la minería mientras obtienes ingresos.</p>
+                        <a href="nerdminers.html" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Segunda diapositiva -->
+            <div class="carousel-item">
+                <div class="row no-gutters">
+                    <div class="col-md-5">
+                        <img src="img/bitaxe.png" alt="BitAxe" class="img-fluid">
+                    </div>
+                    <div class="col-md-7 d-flex flex-column justify-content-center">
+                        <h2>BitAxe</h2>
+                        <p class="texto">El minero compacto que está revolucionando la minería. Con una tasa de hash de 0.5 terahashes por segundo, es perfecto para entusiastas y principiantes.</p>
+                        <a href="bitaxes.html" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tercera diapositiva -->
+            <div class="carousel-item">
+                <div class="row no-gutters">
+                    <div class="col-md-5">
+                        <img src="img/avalannano.png" alt="Avalon Nano 3" class="img-fluid">
+                    </div>
+                    <div class="col-md-7 d-flex flex-column justify-content-center">
+                        <h2>Avalon Nano 3</h2>
+                        <p class="texto">¿Quieres mantenerte caliente en invierno y ganar BTC al mismo tiempo? El Avalon Nano 3 es la respuesta. ¡Convierte el frío en ingresos!</p>
+                        <a href="avalonnano3.html" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Cuarta diapositiva -->
+            <div class="carousel-item">
+                <div class="row no-gutters">
+                    <div class="col-md-5">
+                        <img src="img/apolloii.png" alt="Apollo II" class="img-fluid">
+                    </div>
+                    <div class="col-md-7 d-flex flex-column justify-content-center">
+                        <h2>Apollo II</h2>
+                        <p class="texto">Para aquellos que buscan la máxima potencia y rendimiento, el Apollo II es la elección perfecta.</p>
+                        <a href="apollo2.html" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#productSlider" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#productSlider" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+
+
+    <!-- Sección de Bienvenida -->
+    <div class="container mt-5">
+        <div class="text-center section-header">
+            <h1 class="welcome-header">¡Bienvenidos a <strong>FrontMiners</strong>!</h1>
+            <p class="intro-text">En <strong>FrontMiners</strong>, nos apasiona la tecnología y la criptomoneda. Somos una tienda en línea especializada en ofrecer una variedad de productos de minería de Bitcoin y otras criptomonedas. Nuestro objetivo es proporcionarte las herramientas necesarias para sumergirte en el emocionante mundo de la minería.</p>
+        </div>
+        
+        <h2 class="text-center mt-4 products-header">Nuestros Productos</h2>
+        <div class="row">
+            <!-- NerdMiner -->
+            <div class="col-lg-3 col-md-6 product-section text-center">
+                <img src="img/nerdminer.png" alt="NerdMiner" class="product-image">
+                <h3>NerdMiner</h3>
+                <p>Explora la minería con dispositivos compactos...</p>
+                <a href="nerdminers.html" class="btn btn-info">Ver más</a>
+            </div>
+            <!-- BitAxe -->
+            <div class="col-lg-3 col-md-6 product-section text-center">
+                <img src="img/bitaxe.png" alt="BitAxes" class="product-image">
+                <h3>BitAxe</h3>
+                <p>Conoce los primeros mineros ASIC de código abierto...</p>
+                <a href="bitaxes.html" class="btn btn-info">Ver más</a>
+            </div>
+            <!-- Avalon Nano 3 -->
+            <div class="col-lg-3 col-md-6 product-section text-center">
+                <img src="img/avalannano.png" alt="Avalon Nano 3" class="product-image">
+                <h3>Avalon Nano 3</h3>
+                <p>Mantente caliente mientras minas BTC...</p>
+                <a href="avalonnano3.html" class="btn btn-info">Ver más</a>
+            </div>
+            <!-- Apollo II -->
+            <div class="col-lg-3 col-md-6 product-section text-center">
+                <img src="img/apolloii.png" alt="Apollo II" class="product-image">
+                <h3>Apollo II</h3>
+                <p>Alcanza la élite de la minería con Apollo II...</p>
+                <a href="apollo2.html" class="btn btn-info">Ver más</a>
+            </div>
+        </div>
+
+        <h2 class="text-center section-header mt-5 commitment-header">Nuestro Compromiso</h2>
+        <p class="text-center">En <strong>FrontMiners</strong>, no solo vendemos productos, sino que también construimos una comunidad...</p>
+        
+        <p class="text-center mt-4 call-to-action">¡Explora nuestra web y comienza a minar tus sueños hoy mismo! 🚀🔥</p>
+        <p class="text-center mt-3">Para más detalles y para realizar compras, visita nuestra <a href="productos.html" class="web-link">sección de productos</a>. ¡Gracias por elegirnos como tu destino para la minería de criptomonedas!</p>
+    </div>
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3">
+        <div class="container text-center">
+            <span class="color-white"><p>
+                © 2024 FrontMiners - Es un proyecto elaborado por 
+                <a href="https://www.alsina.me/" target="_blank" title="Visitar la página de Eduardo Alsina">Eduardo Alsina</a>, 
+                estudiante de DAW en 
+                <a href="https://www.cesurformacion.com/" target="_blank" title="Visitar la página de Cesur">Cesur</a> 
+                . Todos los derechos reservados.</p></span>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="js/validaSesion.js"></script>
+
+</body>
+</html>
