@@ -15,7 +15,7 @@ if ($stmt->execute()) {
     $to = $correo;
     $subject = "Confirmación de Registro";
     $message = "Hola " . $nombre . ",\n\nGracias por registrarte. Aquí están los detalles de tu registro:\nUsuario: " . $correo . "\nContraseña: " . $contrasena . "\n\nPor favor, no respondas a este correo.";
-    $headers = "From: registro@frontminers.com";
+    $headers = "From: contacto@frontminers.alsina.me";
 
     mail($to, $subject, $message, $headers);
     echo "Registro exitoso y correo de confirmación enviado.";
