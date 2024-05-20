@@ -505,3 +505,34 @@ textarea.form-control {
         max-width: calc(25% - 30px);
     }
 }
+
+@media (max-width: 767px) {
+    .product-section {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px; /* Añade espacio entre las cajas */
+    }
+}
+
+@media (max-width: 600px) {
+    .newsletter-container iframe {
+        width: 100%;
+        max-width: 100%; /* Asegura que el iframe no exceda el ancho de la pantalla */
+    }
+}
+
+/* Newsletter */
+.newsletter-container {
+    width: 100%;
+    padding: 0 15px; /* Ajusta el padding según sea necesario */
+    box-sizing: border-box;
+}
+
+.newsletter-container iframe {
+    width: 100%;
+    max-width: 480px; /* Mantén el ancho máximo para dispositivos más grandes */
+    height: 150px;
+    border: 1px solid #EEE;
+    background: white;
+    box-sizing: border-box;
+}
