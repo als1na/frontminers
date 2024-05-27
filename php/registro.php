@@ -5,6 +5,8 @@ error_reporting(E_ALL);
 
 include 'conexion.php';
 
+$response = array();
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['nombre']) && isset($_POST['correo']) && isset($_POST['contrasena'])) {
         $nombre = $conn->real_escape_string($_POST['nombre']);
@@ -19,22 +21,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($stmt->execute()) {
             $to = $correo;
             $subject = "Confirmación de Registro";
-            $message = "Hola " . $nombre . ",\\n\\nGracias por registrarte. Aquí están los detalles de tu registro:\\nUsuario: " . $correo . "\\nContraseña: " . $contrasena . "\\n\\nPor favor, no respondas a este correo.";
+            $message = "Hola " . $nombre . ",\n\nGracias por registrarte. Aquí están los detalles de tu registro:\nUsuario: " . $correo . "\nContraseña: " . $contrasena . "\n\nPor favor, no respondas a este correo.";
             $headers = "From: contacto@frontminers.alsina.me";
 
-            mail($to, $subject, $message, $headers);
-            echo "Registro exitoso y correo de confirmación enviado.";
+            if (mail($to, $subject, $message, $headers)) {
+                $response['success'] = "Registro exitoso y correo de confirmación enviado.";
+            } else {
+                $response['error'] = "Registro exitoso, pero no se pudo enviar el correo de confirmación.";
+            }
         } else {
-            echo "Error: " . $stmt->error;
+            $response['error'] = "Error: " . $stmt->error;
         }
 
         $stmt->close();
     } else {
-        echo "Error: Todos los campos son obligatorios.";
+        $response['error'] = "Error: Todos los campos son obligatorios.";
     }
 } else {
-    echo "Método de solicitud no válido.";
+    $response['error'] = "Método de solicitud no válido.";
 }
 
 $conn->close();
+
+echo json_encode($response);
 ?>

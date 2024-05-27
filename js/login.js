@@ -19,11 +19,28 @@ $(document).ready(function() {
                     sessionStorage.setItem('nombre_usuario', response.nombreUsuario);
                     sessionStorage.setItem('correo', correo);
 
-                    if (response.rol === 'admin') {
-                        window.location.href = "principal_admin.html";
-                    } else {
-                        window.location.href = "productos.html";
-                    }
+                    // Mostrar toast de éxito
+                    Swal.fire({
+                        toast: true,
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Ha iniciado sesión exitosamente',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer);
+                            toast.addEventListener('mouseleave', Swal.resumeTimer);
+                        }
+                    });
+
+                    setTimeout(function() {
+                        if (response.rol === 'admin') {
+                            window.location.href = "principal_admin.html";
+                        } else {
+                            window.location.href = "productos.html";
+                        }
+                    }, 3000); // Esperar 3 segundos antes de redirigir
                 }
             },
             error: function(xhr, status, error) {

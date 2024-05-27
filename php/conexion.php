@@ -1,9 +1,9 @@
 <?php
 // Configuración de la conexión a la base de datos
 $servername = "localhost";
-$username = "root"; 
-$password = ""; 
-$dbname = "frontminers";
+$username = "u100856116_admin"; 
+$password = "0&pZZx0N"; 
+$dbname = "u100856116_frontminers";
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);

@@ -10,6 +10,7 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 <body>
     
@@ -52,7 +53,7 @@
         <div class="login-container">
             <img src="img/logo.png" alt="FrontMiners Logo" class="img-fluid login-logo mx-auto d-block">
             <h1 class="text-center mt-4">Regístrate</h1>
-            <form id="registroForm" class="mt-4">
+            <form id="registroForm" class="mt-4" method="POST" action="php/registro.php">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre" class="form-control" required>
@@ -65,7 +66,7 @@
                     <label for="contrasena">Contraseña</label>
                     <input type="password" id="contrasena" name="contrasena" class="form-control" required>
                 </div>
-                <button type="button" id="btnRegistro" class="btn btn-primary btn-block">Registrarse</button>
+                <button type="submit" id="btnRegistro" class="btn btn-primary btn-block">Registrarse</button>
             </form>
             <p class="text-center mt-3">¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
         </div>
@@ -82,11 +83,10 @@
         </div>
     </footer>
 
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
