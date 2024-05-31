@@ -507,7 +507,8 @@ textarea.form-control {
 }
 
 @media (max-width: 767px) {
-    .product-section {
+    .product-section,
+    .product-section2 {
         flex: 0 0 100%;
         max-width: 100%;
         margin-bottom: 20px; /* Añade espacio entre las cajas */
