@@ -522,6 +522,7 @@ textarea.form-control {
 }
 
 /* Newsletter */
+
 .newsletter-container {
     width: 100%;
     padding: 0 15px; /* Ajusta el padding según sea necesario */
@@ -536,3 +537,15 @@ textarea.form-control {
     background: white;
     box-sizing: border-box;
 }
+
+/* Footer */
+
+.footer .footer-link {
+    color: #DAA520; /* Amarillo más oscuro */
+    font-weight: bold; /* Negrita */
+}
+
+.footer .footer-link:hover {
+    color: #B8860B; /* Un tono más oscuro de amarillo para el hover, opcional */
+}
+
